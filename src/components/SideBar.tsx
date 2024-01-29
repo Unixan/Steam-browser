@@ -1,10 +1,10 @@
 import { VStack } from '@chakra-ui/react'
-import Menu from './Menu'
+import MenuItems from './MenuItems'
 
 const SideBar = () => {
   return (
-    <VStack width='300px' bg='red'>
-        <Menu/>
+    <VStack height='calc(100vh - (3rem + 80px))' width='300px' bg='red'>
+      <MenuItems />
     </VStack>
   )
 }
