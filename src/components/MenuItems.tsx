@@ -1,12 +1,12 @@
-import { Link } from "@chakra-ui/react"
+import { Heading, Link, VStack } from "@chakra-ui/react"
 
 const MenuItems = () => {
     return (
-        <>
-            <Link href='#'>Home</Link>
-            <Link href='#'>Players</Link>
-            <Link href='#'>Games</Link>
-        </>
+        <VStack spacing={5} align='left' >
+            <Link href='#'><Heading fontSize={20}>Home</Heading></Link>
+            <Link href='#'><Heading fontSize={20}>Players</Heading></Link>
+            <Link href='#'><Heading fontSize={20}>Games</Heading></Link>
+        </VStack>
     )
 }
 

@@ -1,5 +1,5 @@
-import { HamburgerIcon } from "@chakra-ui/icons";
-import { Box, Flex, Heading, Hide, IconButton, Img, Spacer } from "@chakra-ui/react";
+import { Box, Flex, Heading, Hide, Img, Spacer } from "@chakra-ui/react";
+import BurgerMenu from "./BurgerMenu";
 
 const NavBar = () => {
   return (
@@ -10,7 +10,7 @@ const NavBar = () => {
         <Heading>Steam Browser</Heading>
         <Spacer />
         <Hide above="lg">
-          <IconButton aria-label="Menu" icon={<HamburgerIcon boxSize={10} />} bg='transparent' marginRight={4} />
+          <BurgerMenu />
         </Hide>
       </Flex>
     </Box>
