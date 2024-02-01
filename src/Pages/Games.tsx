@@ -1,10 +1,8 @@
+import GameGrid from "../components/GameGrid"
 
 const Games = () => {
-  return (
-    <div>
-      Games
-    </div>
-  )
+
+  return <GameGrid />
 }
 
-export default Games
+export default Games;
