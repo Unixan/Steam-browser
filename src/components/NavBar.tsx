@@ -7,7 +7,7 @@ const NavBar = () => {
       <Flex minWidth="max-content" alignItems="center">
         <Img src="src\assets\SteamLogo.png" alt='Steam logo' boxSize='80px' objectFit='cover' />
         <Spacer />
-        <Heading>Steam Browser</Heading>
+        <Heading>My Steam Browser</Heading>
         <Spacer />
         <Hide above="lg">
           <BurgerMenu />

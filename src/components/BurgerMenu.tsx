@@ -19,7 +19,7 @@ const BurgerMenu = () => {
                 <DrawerOverlay />
                 <DrawerContent>
                     <DrawerCloseButton />
-                    <DrawerHeader borderBottomWidth='1px' textAlign='center'>Menu</DrawerHeader>
+                    <DrawerHeader borderBottomWidth='1px' textAlign='center' fontSize={40} fontWeight={500}>Menu</DrawerHeader>
                     <DrawerBody>
                         <VStack paddingY={10}>
                             <MenuItems />

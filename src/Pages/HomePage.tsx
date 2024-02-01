@@ -1,9 +1,10 @@
+import { Box } from "@chakra-ui/react"
 
 const HomePage = () => {
   return (
-    <div>
-      test
-    </div>
+    <Box>
+      HomePage
+    </Box>
   )
 }
 
