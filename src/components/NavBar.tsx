@@ -3,9 +3,14 @@ import BurgerMenu from "./BurgerMenu";
 
 const NavBar = () => {
   return (
-    <Box margin={2} >
+    <Box margin={2}>
       <Flex minWidth="max-content" alignItems="center">
-        <Img src="src\assets\SteamLogo.png" alt='Steam logo' boxSize='80px' objectFit='cover' />
+        <Img
+          src="src\assets\SteamLogo.png"
+          alt="Steam logo"
+          boxSize="80px"
+          objectFit="cover"
+        />
         <Spacer />
         <Heading>My Game Browser</Heading>
         <Spacer />
