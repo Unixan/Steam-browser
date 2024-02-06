@@ -1,11 +1,10 @@
 import { Grid, GridItem, Show } from "@chakra-ui/react"
 import { useState } from "react"
-import { Outlet } from "react-router-dom"
 import Footer from "./components/Footer"
+import GameGrid from "./components/GameGrid"
 import GenreList from "./components/GenreList"
 import NavBar from "./components/NavBar"
 import { Genre } from "./hooks/useGenres"
-import GameGrid from "./components/GameGrid"
 
 
 const Layout = () => {
@@ -32,7 +31,7 @@ const Layout = () => {
             </GridItem>
             <Show above="lg">
                 <GridItem area='Side' paddingX={5}>
-                    <GenreList onSelectGenre={(genre) => setSelectedGenre(genre)}/>
+                    <GenreList selectedGenre={selectedGenre} onSelectGenre={(genre) => setSelectedGenre(genre)}/>
                 </GridItem>
                 <GridItem area='Foot'>
                     <Footer />
