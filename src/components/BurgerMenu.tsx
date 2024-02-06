@@ -1,21 +1,16 @@
 import { HamburgerIcon } from "@chakra-ui/icons";
 import {
-  Drawer,
-  DrawerBody,
-  DrawerCloseButton,
-  DrawerContent,
-  DrawerHeader,
-  DrawerOverlay,
-  HStack,
-  IconButton,
-  VStack,
-  useDisclosure,
+    Drawer,
+    DrawerBody,
+    DrawerCloseButton,
+    DrawerContent,
+    DrawerHeader,
+    DrawerOverlay,
+    HStack,
+    IconButton,
+    VStack,
+    useDisclosure,
 } from "@chakra-ui/react";
-import GenreList from "./GenreList";
-import PlatformSelector from "./PlatformSelector";
-import SearchInput from "./SearchInput";
-import SortSelector from "./SortSelector";
-import { GameQuery } from "../App";
 
 const BurgerMenu = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
