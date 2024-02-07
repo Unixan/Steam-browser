@@ -4,9 +4,10 @@ import { BsSearch } from "react-icons/bs";
 
 interface Props {
   onSearch: (searchText: string) => void;
+  currentSearchString: string;
 }
 
-const SearchInput = ({ onSearch }: Props) => {
+const SearchInput = ({ onSearch, currentSearchString }: Props) => {
   const ref = useRef<HTMLInputElement>(null);
 
   return (
@@ -23,6 +24,7 @@ const SearchInput = ({ onSearch }: Props) => {
           borderRadius={20}
           placeholder="Search games ..."
           variant="filled"
+          value={currentSearchString}
         />
         ;
       </InputGroup>

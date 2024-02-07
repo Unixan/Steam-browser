@@ -18,7 +18,7 @@ const NavBar = ({ gameQuery, onGameQuery }: Props) => {
           objectFit="cover"
         />
         <Spacer />
-        <Heading>My Game Browser</Heading>
+        <Heading>Game Hub</Heading>
         <Spacer />
         <Hide above="lg">
           <BurgerMenu

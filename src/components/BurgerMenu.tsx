@@ -50,24 +50,25 @@ const BurgerMenu = ({ gameQuery, onGameQuery }: Props) => {
           <DrawerBody>
             <VStack paddingY={10}>
               <SearchInput
+                currentSearchString={gameQuery.searchText}
                 onSearch={(searchText) =>
                   onGameQuery({ ...gameQuery, searchText })
                 }
               />
-              <HStack align="flex-start">
-                <PlatformSelector
-                  onSelectPlatform={(platform) =>
-                    onGameQuery({ ...gameQuery, platform })
-                  }
-                  selectedPlatform={gameQuery.platform}
-                />
-                <SortSelector
-                  onSelectSortOrder={(sortOrder) =>
-                    onGameQuery({ ...gameQuery, sortOrder })
-                  }
-                  sortOrder={gameQuery.sortOrder}
-                />
-              </HStack>
+              {/* <HStack align="flex-start"> */}
+              <PlatformSelector
+                onSelectPlatform={(platform) =>
+                  onGameQuery({ ...gameQuery, platform })
+                }
+                selectedPlatform={gameQuery.platform}
+              />
+              <SortSelector
+                onSelectSortOrder={(sortOrder) =>
+                  onGameQuery({ ...gameQuery, sortOrder })
+                }
+                sortOrder={gameQuery.sortOrder}
+              />
+              {/* </HStack> */}
               <GenreList
                 onSelectGenre={(genre) => onGameQuery({ ...gameQuery, genre })}
                 selectedGenre={gameQuery.genre}
