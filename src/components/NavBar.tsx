@@ -1,7 +1,13 @@
 import { Box, Flex, Heading, Hide, Img, Spacer } from "@chakra-ui/react";
 import BurgerMenu from "./BurgerMenu";
+import { GameQuery } from "../data/Interfaces";
 
-const NavBar = () => {
+interface Props {
+  gameQuery: GameQuery;
+  onGameQuery: (gameQuery: GameQuery) => void;
+}
+
+const NavBar = ({ gameQuery, onGameQuery }: Props) => {
   return (
     <Box margin={2}>
       <Flex minWidth="max-content" alignItems="center">
@@ -15,7 +21,10 @@ const NavBar = () => {
         <Heading>My Game Browser</Heading>
         <Spacer />
         <Hide above="lg">
-          <BurgerMenu />
+          <BurgerMenu
+            onGameQuery={(gameQuery) => onGameQuery(gameQuery)}
+            gameQuery={gameQuery}
+          />
         </Hide>
       </Flex>
     </Box>

@@ -1,18 +1,28 @@
 import { HamburgerIcon } from "@chakra-ui/icons";
 import {
-    Drawer,
-    DrawerBody,
-    DrawerCloseButton,
-    DrawerContent,
-    DrawerHeader,
-    DrawerOverlay,
-    HStack,
-    IconButton,
-    VStack,
-    useDisclosure,
+  Drawer,
+  DrawerBody,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerHeader,
+  DrawerOverlay,
+  HStack,
+  IconButton,
+  VStack,
+  useDisclosure,
 } from "@chakra-ui/react";
+import { GameQuery } from "../data/Interfaces";
+import GenreList from "./GenreList";
+import SearchInput from "./SearchInput";
+import SortSelector from "./SortSelector";
+import PlatformSelector from "./PlatformSelector";
 
-const BurgerMenu = () => {
+interface Props {
+  gameQuery: GameQuery;
+  onGameQuery: (gameQuery: GameQuery) => void;
+}
+
+const BurgerMenu = ({ gameQuery, onGameQuery }: Props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
@@ -39,7 +49,29 @@ const BurgerMenu = () => {
           </DrawerHeader>
           <DrawerBody>
             <VStack paddingY={10}>
-              <HStack align="flex-start"></HStack>
+              <SearchInput
+                onSearch={(searchText) =>
+                  onGameQuery({ ...gameQuery, searchText })
+                }
+              />
+              <HStack align="flex-start">
+                <PlatformSelector
+                  onSelectPlatform={(platform) =>
+                    onGameQuery({ ...gameQuery, platform })
+                  }
+                  selectedPlatform={gameQuery.platform}
+                />
+                <SortSelector
+                  onSelectSortOrder={(sortOrder) =>
+                    onGameQuery({ ...gameQuery, sortOrder })
+                  }
+                  sortOrder={gameQuery.sortOrder}
+                />
+              </HStack>
+              <GenreList
+                onSelectGenre={(genre) => onGameQuery({ ...gameQuery, genre })}
+                selectedGenre={gameQuery.genre}
+              />
             </VStack>
           </DrawerBody>
         </DrawerContent>
